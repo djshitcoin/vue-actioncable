@@ -10,14 +10,14 @@ For now, easiest way is to copy the `vue-actioncable.js` file into your `assets/
 
 In your initialization code:
 
-```coffee
+```js
 var cable = ActionCable.createConsumer()
 Vue.use(VueActionCable, cable)
 ```
 
 And in your HTML/HAML file
 
-```
+```coffee
 new Vue
   data: ->
     messages: <%= raw @messages.to_json %>
