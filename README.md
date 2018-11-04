@@ -34,4 +34,8 @@ new Vue
         console.log('suh dude')
       disconnected: ->
         console.log('gg')
+  methods:
+    sendSomething: ->
+      # The subscriptions can be easily accessed directly on the vue instance
+      @ChatChannel.send("something")
 ```
