@@ -21,10 +21,17 @@ And in your HTML/HAML file
 new Vue
   data: ->
     messages: <%= raw @messages.to_json %>
+    room: 'somechannel'
   subscriptions:
     ChatChannel:
+      # you can pass vue instance data here
       params: ->
         room: this.room
+      # actioncable callbacks go here
       received: (message) ->
         this.messages.push(message)
+      connected: ->
+        console.log('suh dude')
+      disconnected: ->
+        console.log('gg')
 ```
