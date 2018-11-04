@@ -27,7 +27,7 @@ var VueActionCable = {
           $vm.$watch(paramsFn, function(params) {
             if ($vm._subscriptions[channelName]) $vm._subscriptions[channelName].unsubscribe()
             params.channel = channelName
-            $vm._subscriptions[channelName] = cable.subscriptions.create(params, {
+            $vm[channelName] = $vm._subscriptions[channelName] = cable.subscriptions.create(params, {
               received: subOptions.received.bind($vm),
               connected: subOptions.connected.bind($vm),
               disconnected: subOptions.disconnected.bind($vm)
