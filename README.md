@@ -1,6 +1,6 @@
 # vue-actioncable
 
-vue-actioncable automatically subscribes to channels when a component is mounted and thanks to vue's reactivity system, it resubscribes automatically when parameters change.
+vue-actioncable automatically creates [Action Cable](https://edgeguides.rubyonrails.org/action_cable_overview.html) subscriptions when a component is mounted. And thanks to Vue's reactivity system, it resubscribes automatically when parameters change.
 
 ## Installation
 
